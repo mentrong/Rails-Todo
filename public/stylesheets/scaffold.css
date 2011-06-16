@@ -1,9 +1,9 @@
 body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+  font-family: helvetica, verdana, arial, helvetica, sans-serif;
+  font-size:   12px;
+  line-height: 20px;
 }
 
 pre {
@@ -54,3 +54,17 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+td{padding:20px;}
+li{padding:10px;  list-style:none;}
+#itemName{font-weight: bold; font-size: 14px;}
+#wrapper{margin: auto; width: 800px; border: 1px solid #ccc; padding: 20px;}
+.todoItem{width:600px; margin-left:100px;}
+#itemDescription{color:#666;}
+#itemOptions{padding:20px;}
+#itemOptions ul {display: inline;}
+#itemOptions ul li {display: inline;}
+.due{font-weight: bold; color: #666;}
+.mod{margin: 10px 0px;}
+.hd{margin-bottom: 10px;}
+.bd{margin:0px 10px;}

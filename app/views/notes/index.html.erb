@@ -1,27 +1,25 @@
-<h1>Listing notes</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Duedate</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @notes.each do |note| %>
-  <tr>
-    <td><%= note.name %></td>
-    <td><%= note.description %></td>
-    <td><%= note.dueDate %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Note', new_note_path %>
+<div id="wrapper">
+	<h1>Stew's ToDo List</h1>
+	<div class="mod">
+		<div class="mod">
+			<%= link_to 'New Task', new_note_path %>
+		</div>
+	</div>
+	<% @notes.each do |note| %>
+	
+	<div class="todoItem">
+		<div class="mod">
+			<div id="itemName" class="hd"><%= note.name %></div>
+			<div id="itemDescription" class="bd"><%= note.description %></div>
+			<div id="itemOptions" class="ft">
+				<ul>
+					<li><span class="due">Due Date:</span> <%= note.dueDate %>	</li>
+					<li>|</li>
+					<li><%= link_to 'Edit', edit_note_path(note) %></li>
+					<li><%= link_to 'Done', note, :confirm => 'Did you really finish?', :method => :delete %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
