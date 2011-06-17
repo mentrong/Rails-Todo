@@ -7,13 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div id="header">
+<div
+ id="header">
 	<div class="container_12">
 		<div id="id" class="grid_6"><h1>Mission Control</h1></div>
 		<div class="grid_6">
 			<ul class="nav">
 				<li><%= link_to 'ToDo List', notes_path %></li>
-				<li><%= link_to 'Lessons', lessons_path %></li>		
+				<li><%= link_to 'Lessons', lessons_path %></li>	
+				<li><%= link_to 'Journal', journals_path %></li>	
 			</ul>
 		</div>
 	</div>

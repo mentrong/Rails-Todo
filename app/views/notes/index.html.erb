@@ -1,26 +1,30 @@
-<div class="grid_6">
-	<h1>ToDo Today:</h1>
-	<%= link_to 'New Task', new_note_path, :class=> 'button' -%>
-</div>
-<div class="grid_6">
-	time and date
-</div>
-<% @notes.each do |note| %>
-<div class="grid_8">
-	<div class="mod">
-		<div id="itemName" class="hd"><%= note.name %></div>
-		<div id="itemDescription" class="bd"><%= note.description %></div>
-		<div id="itemOptions" class="ft">
-			<ul>
-				<li><span class="due">Due Date:</span> <%= note.dueDate %>	</li>
-				<li>|</li>
-				<li><%= link_to 'Edit', edit_note_path(note) %></li>
-				<li><%= link_to 'Done', note, :confirm => 'Did you really finish?', :method => :delete %></li>
-			</ul>
-		</div>	
+<div class="wrapper">
+	<div class="grid_6">
+		<h1>ToDo Today:</h1>
+		<%= link_to 'New Task', new_note_path, :class=> 'button' %>
 	</div>
+	<div class="grid_6">
+		<div class="mod f-right">
+			time and date
+		</div>
+	</div>
+	<% @notes.each do |note| %>
+	<div class="grid_8">
+		<div class="mod">
+			<div id="itemName" class="hd"><%= note.name %></div>
+			<div id="itemDescription" class="bd"><%= note.description %></div>
+			<div id="itemOptions" class="ft">
+				<ul>
+					<li><span class="due">Due Date:</span> <%= note.dueDate %>	</li>
+					<li>|</li>
+					<li><%= link_to 'Edit', edit_note_path(note) %></li>
+					<li><%= link_to 'Done', note, :confirm => 'Did you really finish?', :method => :delete %></li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+<% end %>
 </div>
-	<% end %>
 	
 	<!--
 <div class="grid_12">
