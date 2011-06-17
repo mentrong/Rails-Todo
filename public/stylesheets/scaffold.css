@@ -1,4 +1,6 @@
+*{margin:0px; padding: 0px;}
 body { background-color: #fff; color: #333; }
+
 
 body, p, ol, ul, td {
   font-family: helvetica, verdana, arial, helvetica, sans-serif;
@@ -55,6 +57,50 @@ div.field, div.actions {
   list-style: square;
 }
 
+/* text styles */
+h1{font-size: 35px; font-weight: bold;}
+h2{font-size: 30px; font-weight: bold;}
+
+/* Buttons */
+.button {
+	display: inline-block;
+	background: white;
+	border: 1px solid #DDD;
+	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #666;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1em;
+	text-align: center;
+	vertical-align: middle;
+	-moz-box-shadow: 0 0 .25em rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 0 .25em rgba(0, 0, 0, .2);
+	-moz-border-radius: 1.1em;
+	-webkit-border-radius: 1.1em;
+	text-decoration: none !important;
+}
+
+.button span {
+	display: block;
+	padding: .4em 1em;
+	background-color: #DDD;
+	text-shadow: -1px 1px 0 rgba(255, 255, 255, .7);
+	margin: 2px;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-webkit-background-clip: padding-box;
+	text-transform: uppercase;
+	border: none;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#AAA));
+
+
+}
+
+#header a{color:#fff; text-decoration: none;}
+#id h1{font-size: 25px; font-weight: normal; padding:10px 0; color:#fff;}
+#header ul, #header li {display: inline; float: right;}
 td{padding:20px;}
 li{padding:10px;  list-style:none;}
 #itemName{font-weight: bold; font-size: 14px;}
@@ -68,3 +114,5 @@ li{padding:10px;  list-style:none;}
 .mod{margin: 10px 0px;}
 .hd{margin-bottom: 10px;}
 .bd{margin:0px 10px;}
+#header{background:#000; height:50px; margin-bottom: 20px; padding:10px 0; border-bottom: 1px solid #fff; }
+.f-right{float:right;}
