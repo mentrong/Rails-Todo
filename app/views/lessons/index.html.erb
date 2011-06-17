@@ -1,0 +1,49 @@
+<div class="grid_6">
+	<div class="mod">
+		<h2>Sunday School Lessons</h2>
+	</div>
+</div>
+<div class="grid_6">
+	<div class="mod f-right">
+		<span><%= link_to 'New Lesson', new_lesson_path %></span>
+	</div>
+</div>
+<div class="grid_6">
+	<div class="mod">
+		<p>Below are all the lessons. To create a new lesson click the <i>New Lesson</i> button.</p>
+	</div>
+</div>
+
+
+
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Scripture</th>
+    <th>Preview</th>
+    <th>Body</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lessons.each do |lesson| %>
+  <tr>
+    <td><%= lesson.title %></td>
+    <td><%= lesson.scripture %></td>
+    <td><%= lesson.preview %></td>
+    <td><%= lesson.body %></td>
+    <td><%= lesson.date %></td>
+    <td><%= link_to 'Show', lesson %></td>
+    <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
+    <td><%= link_to 'Destroy', lesson, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lesson', new_lesson_path %>

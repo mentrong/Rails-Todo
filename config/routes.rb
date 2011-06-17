@@ -1,4 +1,6 @@
 Todo::Application.routes.draw do
+  resources :lessons
+
   resources :notes
 
   # The priority is based upon order of creation:
