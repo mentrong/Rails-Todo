@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  price: 9.99
+  date: 2011-06-19
+  description: MyText
+
+two:
+  title: MyString
+  price: 9.99
+  date: 2011-06-19
+  description: MyText

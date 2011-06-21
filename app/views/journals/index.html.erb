@@ -1,25 +1,27 @@
-<h1>Listing journals</h1>
+<div class="wrapper">
+	<div class="grid_6"><div class="mod"><h1>Journal Entries</h1></div></div>
+	<div class="grid_6"><div class="mod f-right"><%= link_to 'New Journal', new_journal_path %></div></div>
+	<div class="grid_12">
+		<div class="mod">
+			<table id="entries">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Date</th>
+						<th>Preview</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @journals.each do |journal| %>
+					<tr>
+						<td><%= journal.title %></td>
+						<td><i>Date</i></td>
+						<td><%= journal.body %></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	<% end %>
+	</div>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @journals.each do |journal| %>
-  <tr>
-    <td><%= journal.title %></td>
-    <td><%= journal.body %></td>
-    <td><%= link_to 'Show', journal %></td>
-    <td><%= link_to 'Edit', edit_journal_path(journal) %></td>
-    <td><%= link_to 'Destroy', journal, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Journal', new_journal_path %>

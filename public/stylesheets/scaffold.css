@@ -117,3 +117,4 @@ li{padding:10px;  list-style:none;}
 .bd{margin:0px 10px;}
 .f-right{float:right;}
 .wrapper{margin-top: 40px;}
+#entries{height: 400px; background: lime; overflow: scroll;}

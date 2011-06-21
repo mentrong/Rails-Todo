@@ -1,4 +1,6 @@
 Todo::Application.routes.draw do
+  resources :inventories
+
   resources :journals
 
   resources :lessons
