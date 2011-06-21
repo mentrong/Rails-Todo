@@ -1,7 +1,13 @@
 <div class="wrapper">
 	<div class="grid_6">
-		<h1>ToDo Today:</h1>
-		<%= link_to 'New Task', new_note_path, :class=> 'button' %>
+		<div class="mod">
+			<div class="hd">
+				<h1>ToDo Today:</h1>
+			</div>
+			<div class="bd">
+				<%= link_to 'New Task', new_note_path, :onclick => "Modalbox.show(this.href, {title: this.text, width: 500}); return false;", :class => "button"  %>
+			</div>
+		</div>
 	</div>
 	<div class="grid_6">
 		<div class="mod f-right">

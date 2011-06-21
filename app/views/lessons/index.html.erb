@@ -5,7 +5,7 @@
 </div>
 <div class="grid_6">
 	<div class="mod f-right">
-		<span><%= link_to 'New Lesson', new_lesson_path %></span>
+		<span><%= link_to 'New Lesson', new_lesson_path, :onclick => "Modalbox.show(this.href, {title: this.text, width: 700}); return false;", :class => "button"  %></span>
 	</div>
 </div>
 <div class="grid_6">
@@ -13,24 +13,33 @@
 		<p>Below are all the lessons. To create a new lesson click the <i>New Lesson</i> button.</p>
 	</div>
 </div>
-<div class="grid_9">
+<div class="prefix_1 grid_10 suffix_1">
 	<div class="mod">
 		<table>
+			<thead>
+				<tr>
+					<th>Lesson Title:</th>
+					<th>Lesson Date:</th>
+					<th>Lesson Preview:</th>
+				</tr>
+			</thead>
+			<tbody>
 			<% @lessons.each do |lesson| %>
-			<tr>
-				<td><%= link_to lesson.title, lesson %></td>
-				<td><%= lesson.date %></td>
-				<td><%= lesson.date %></td>
-				<td><%= lesson.preview %></td>
-			</tr>
+				<tr>
+					<td style="width:25%"><%= link_to lesson.title, lesson %></td>
+					<td style="width:25%"><%= lesson.date %></td>
+					<td style="width:50%"><%= lesson.preview %></td>
+				</tr>
+			<% end %>
+			</tbody>
 		</table>
 	</div>
 </div>
-<% end %>
 
 
 
 
+<!--
 <table>
   <tr>
     <th>Title</th>
@@ -51,12 +60,12 @@
     <td><%= lesson.body %></td>
     <td><%= lesson.date %></td>
     <td><%= link_to 'Show', lesson %></td>
-    <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
+    <td><%= link_to 'Edit', edit_lesson_path(lesson), :onclick => "Modalbox.show(this.href, {title: this.text, width: 700}); return false;" %></td>
     <td><%= link_to 'Destroy', lesson, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+-->
 
-<%= link_to 'New Lesson', new_lesson_path %>

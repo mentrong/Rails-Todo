@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title ,:placeholder => 'Enter a Title' %>
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body ,:placeholder => 'Create your journal entry here.' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save Entry', :class => 'button' %>
   </div>
 <% end %>

@@ -27,7 +27,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => 'form'} # new.html.erb
       format.xml  { render :xml => @lesson }
     end
   end
@@ -35,6 +35,7 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
     @lesson = Lesson.find(params[:id])
+    render :layout => 'form'
   end
 
   # POST /lessons
@@ -44,8 +45,8 @@ class LessonsController < ApplicationController
 
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to(@lesson, :notice => 'Lesson was successfully created.') }
-        format.xml  { render :xml => @lesson, :status => :created, :location => @lesson }
+        format.html { redirect_to(lessons_path, :notice => 'Lesson was successfully created.') }
+        format.xml  { render :xml => lessons_path, :status => :created, :location => @lesson }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @lesson.errors, :status => :unprocessable_entity }

@@ -1,6 +1,7 @@
 <div class="wrapper">
 	<div class="grid_6"><div class="mod"><h1>Journal Entries</h1></div></div>
-	<div class="grid_6"><div class="mod f-right"><%= link_to 'New Journal', new_journal_path %></div></div>
+	<div class="grid_6"><div class="mod f-right"><%= link_to 'New Entry', new_journal_path, :onclick => "Modalbox.show(this.href, {title: this.text, width: 500}); return false;", :class => "button"  %></div></div>
+
 	<div class="grid_12">
 		<div class="mod">
 			<table id="entries">

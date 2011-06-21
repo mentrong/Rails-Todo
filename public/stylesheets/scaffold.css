@@ -8,29 +8,22 @@ body, p, ol, ul, td {
   line-height: 20px;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-
-
-
-div.field, div.actions {
-  margin-bottom: 10px;
-}
+input {margin: 0px; padding: 0px;}
 
 #notice {
   color: green;
 }
 
+/* Form Elements */
+/* Actions & Fields */
+.actions, .field{padding:10px; }
+.actionsFirst, .fieldFirst{padding:0 10px 10px 10px;}
+.actionsLast, .fieldLast{padding: 10px 10px 0px 10px;}
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
-
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -39,7 +32,6 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -50,12 +42,22 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
 }
+/* input elements */
+::-webkit-input-placeholder {color:#aaa; font-style: italic; font-family: Georgia;}
 
+
+
+
+input{padding:10px 5px;; border: 1px solid #ccc; margin: 5px 0px;; -webkit-box-shadow: 0px -1px 0px #bbb;}
+input:focus{border:1px solid #267fc8; -webkit-box-shadow: 0px -1px 0px #;}
+textarea{padding:10px 5px;; border: 1px solid #ccc; margin: 5px 0px; -webkit-box-shadow: 0px -1px 0px #bbb;}
+textarea:focus{border:1px solid #267fc8; -webkit-box-shadow: 0px -1px 0px #bbb;}
+.preview textarea, .body textarea {height: 60px; width: 100%;}
+.body textarea{height: 150px;}
 /* text styles */
 h1{font-size: 35px; font-weight: bold;}
 h2{font-size: 30px; font-weight: bold;}
@@ -73,7 +75,6 @@ a:hover {color: #666;}
 	white-space: nowrap;
 	color: #333;
 	font-weight: normal;
-	margin: 20px 0;
 	padding: 10px;
 	font-size: 12px;
 	font-weight: 600;
@@ -113,8 +114,20 @@ li{padding:10px;  list-style:none;}
 #itemOptions ul li {display: inline;}
 .due{font-weight: bold; color: #666;}
 .mod{margin: 10px 0px;}
-.hd{margin-bottom: 10px;}
-.bd{margin:0px 10px;}
+.hd{padding-bottom: 10px;}
+.bd{padding:10px;}
 .f-right{float:right;}
 .wrapper{margin-top: 40px;}
 #entries{height: 400px; background: lime; overflow: scroll;}
+#formModal{padding:20px; margin: auto;}
+
+/* form Grids */
+.formWrapper{width:620px; margin-left: auto; margin-right: auto;}
+	.formGrid_1, .formGrid_2, .formGrid_3 {display:inline;float:left;position:relative;margin-left:10px;margin-right:10px;}
+	.formGrid_2{width: 400px;}
+	.formGrid_3{width:600px;}
+/* Tables */
+table{background: #efefef;}
+thead {background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#efefef), to(#aaa)); text-shadow: 0px 1px 0px #fff; color: #333;}
+thead tr th {height: 30px; border: 1px solid #ccc;  border-bottom: 1px solid #efefef; padding-top: 10px; }
+tbody tr td {height: 15px; overflow: hidden; border: 1px solid #ccc; -webkit-box-shadow: 0px 2px 0px #fff;}

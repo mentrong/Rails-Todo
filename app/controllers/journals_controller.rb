@@ -27,7 +27,7 @@ class JournalsController < ApplicationController
     @journal = Journal.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => 'form'}  # new.html.erb
       format.xml  { render :xml => @journal }
     end
   end
@@ -44,8 +44,8 @@ class JournalsController < ApplicationController
 
     respond_to do |format|
       if @journal.save
-        format.html { redirect_to(@journal, :notice => 'Journal was successfully created.') }
-        format.xml  { render :xml => @journal, :status => :created, :location => @journal }
+        format.html { redirect_to( journals_path, :notice => 'Journal was successfully created.') }
+        format.xml  { render :xml => journals_path, :status => :created, :location => @journal }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @journal.errors, :status => :unprocessable_entity }
