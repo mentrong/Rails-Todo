@@ -15,7 +15,7 @@
     <%= f.label :name %><br />
     <%= f.text_field :name ,:placeholder => 'Enter Task Title' %>
   </div>
-  <div class="field">
+  <div class="field" id="elm1" name="elm1" rows="15" cols="80" style="width: 80%">
     <%= f.label :description %><br />
     <%= f.text_area :description ,:placeholder => 'Enter a short task description' %>
   </div>
@@ -27,3 +27,9 @@
 -->
   <div class="actionsLast"><%= submit_tag 'Save Task', :class => 'button' %></div>
 <% end %>
+<script type="text/javascript">
+	tinyMCE.init({
+		mode : "textareas",
+		theme : "simple"
+	});
+</script>

@@ -18,7 +18,7 @@
 	<div class="grid_8">
 		<div class="mod">
 			<div id="itemName" class="hd"><%= note.name %></div>
-			<div id="itemDescription" class="bd"><%= note.description %></div>
+			<div id="itemDescription" class="bd"><%= raw note.description %></div>
 			<div id="itemOptions" class="ft">
 				<ul>
 					<li><span class="due">Due Date:</span> <%= note.dueDate %>	</li>
