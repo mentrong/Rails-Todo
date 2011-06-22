@@ -20,21 +20,27 @@
 	 <div class="formGrid_1">
 	 	<div class="field">
 	    	<%= f.label :scripture %><br />
-	    	<%= f.text_field :scripture ,:placeholder => 'Enter a Scripture Refrance' %>
+	    	<%= f.text_field :scripture ,:placeholder => 'Enter a Scripture Reference' %>
+	  	</div>
+	  </div>
+	  <div class="formGrid_1">
+	  	<div class="field">
+	    	<%= f.label :date, 'Release Date' %><br />
+	    	<%= f.date_select :date %>
 	  	</div>
 	  </div>
 	  <div class="clear"></div>
 	  <div class="formGrid_3">
-		  <div class="field preview">
+		  <div class="field preview" id="preview">
 		    <%= f.label :preview %><br />
 		    <%= f.text_area :preview ,:placeholder => 'Enter a short preview here.' %>
 		  </div>
 	  </div>
 	  <div class="clear"></div>
 	  <div class="formGrid_3">
-		  <div class="field body">
+		  <div class="field body" id="mceEditor" name="elm1" rows="15" cols="80">
 		    <%= f.label :body %><br />
-		    <%= f.text_area :body ,:placeholder => 'Craft your lesson here.' %>
+		    <%= f.text_area :body ,:placeholder => 'Craft your lesson here.', :class => 'mceEditor' %>
 		  </div>
 	  </div>
 	  <div class="clear"></div>
@@ -44,8 +50,17 @@
 	    <%= f.date_select :date %>
 	  </div>
 -->
-	  <div class="actions">
-	    <%= f.submit 'Create Lesson', :class => 'button' %>
+	<div class="formGrid_3">
+	  <div class="actions f-right">
+	    <%= f.submit 'Save Lesson', :class => 'button' %>
 	  </div>
+	</div>
 	<% end %>
 </div>
+<script type="text/javascript">
+	tinyMCE.init({
+		mode : "specific_textareas",
+        editor_selector : "mceEditor",
+		theme : "simple"
+	});
+</script>

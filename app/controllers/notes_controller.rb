@@ -35,6 +35,7 @@ class NotesController < ApplicationController
   # GET /notes/1/edit
   def edit
     @note = Note.find(params[:id])
+    render :layout => 'form'
   end
 
   # POST /notes

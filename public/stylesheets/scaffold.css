@@ -109,9 +109,9 @@ li{padding:10px;  list-style:none;}
 #wrapper{margin: auto; width: 800px; border: 1px solid #ccc; padding: 20px;}
 .todoItem{width:600px; margin-left:100px;}
 #itemDescription{color:#666;}
-#itemOptions{padding:20px;}
-#itemOptions ul {display: inline;}
-#itemOptions ul li {display: inline;}
+.liInline{padding:20px;}
+.liInline ul {display: inline;}
+.liInline ul li {display: inline;}
 .due{font-weight: bold; color: #666;}
 .mod{margin: 10px 0px;}
 .hd{padding-bottom: 10px;}
@@ -122,8 +122,9 @@ li{padding:10px;  list-style:none;}
 #formModal{padding:20px; margin: auto;}
 
 /* form Grids */
-.formWrapper{width:620px; margin-left: auto; margin-right: auto;}
-	.formGrid_1, .formGrid_2, .formGrid_3 {display:inline;float:left;position:relative;margin-left:10px;margin-right:10px;}
+.formWrapper{width:650px; margin-left: auto; margin-right: auto;}
+	.formGrid_1, .formGrid_2, .formGrid_3 {display:inline;float:left;position:relative;margin-left:5px;margin-right:5px;}
+	.formGrid_1{width:200px;}
 	.formGrid_2{width: 400px;}
 	.formGrid_3{width:600px;}
 /* Tables */
